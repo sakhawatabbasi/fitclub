@@ -8,15 +8,14 @@ const Join = () => {
     const form= useRef()
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_487rn1e', 'template_lhok5hi', form.current, '-SKv77RKpsQpNBhht')
+        emailjs.sendForm('service_9ntsqd1', 'template_phfbdo9', form.current, 'YT5eayF7RGBk9LNmD')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
               console.log(error.text);
           });
+          
       };
-
-
   return (
     <div className='join' id='join-us'>
         <div className='left-j'>

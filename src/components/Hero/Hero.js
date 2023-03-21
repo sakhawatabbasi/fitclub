@@ -7,6 +7,8 @@ import Heart from '../../assets/heart.png';
 import Calories from '../../assets/calories.png'; 
 import {motion} from 'framer-motion' 
 import CountUp from 'react-countup';
+import { Link } from 'react-scroll';
+
 
 const Hero = () => {
     const transition = {type: 'spring', duration : 5}
@@ -43,17 +45,15 @@ const Hero = () => {
             {/* figures */}
             <div className='figures'>
                 <div>
-                    <span>
-                        <CountUp start={100}  end ={140} delay ='2' preFix='+'/>
-                    </span>
+                    <span>+<CountUp start={100}  end ={140} delay ='2' preFix=" "/></span>
                     <span>experts coachs</span>
                 </div>
                 <div>
-                    <span> <CountUp start={800}  end ={978} delay ='2' preFix='+'/> </span>
+                    <span>+<CountUp start={800}  end ={978} delay ='2' preFix='+'/></span>
                     <span>member joined</span>
                 </div>
                 <div>
-                    <span> <CountUp start={0}  end ={50} delay ='2' preFix='+'/> </span>
+                    <span>+<CountUp start={0}  end ={50} delay ='2' preFix='+'/></span>
                     <span>fitness programs</span>
                 </div>
             </div>
@@ -67,7 +67,8 @@ const Hero = () => {
     {/*             right side of hero section                */}
 
         <div className="right-h">
-            <button className='btn'>Join Now</button>
+           <button className='btn'> <Link onClick={()=> (true)} to='join-us' spy={true} smooth={true}>Join Now</Link></button>
+
             <motion.div
             initial={{right:'1rem'}}
             whileInView={{right:'9rem'}}

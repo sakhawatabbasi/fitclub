@@ -6,6 +6,7 @@
 .logo{
     width: 10rem;
     height: 3rem;
+    cursor: pointer;
 }
 .headers-menu{
  list-style: none;

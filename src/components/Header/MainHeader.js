@@ -11,7 +11,8 @@ const MainHeader = () => {
 
   return (
     <div className='header'>
-      <img className='logo' src={logo} alt=''/>
+      <Link onClick={()=> setMenuOpend(false)} to='' spy={true} smooth={true}>
+      <img className='logo' src={logo} alt=''/></Link>
       {menuOpend === false && mobile === true ?(
         <div style={{
         backgroundColor:'var(--appColor)',
